@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Milligram CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Jeu simple de chaud-froid</title>
+</head>
+<body >
+
+    <div class="main">
+        <div class="header">
+            <h1>
+                Quel est le chiffre à trouver ? 
+            </h1>
+        </div>
+        <div class="body">
+            <div class="form-main">
+                <form action="#">
+                    <label for="proposition">Proposition</label>
+                    <input type="text" name='proposition' id='proposition' placeholder="42"/>
+                    <button type='button' onclick="tentative()">Valider</button>
+                    
+                </form>
+
+                <div class="solution">
+                    <h3 id='sol'>
+                        
+                    </h3>
+                </div>
+            </div>
+            <div class="props">
+                <h2>
+                    Vos essais : 
+                </h2>
+                <h3 id='ess'>
+
+                </h3>
+                <p>
+                    Nombre d'essais : <span id="nbe"> </span>
+                </p>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="explication">
+                <h2>
+                    Règles du jeu.
+                </h2>
+                <h2>
+                    L'objectif est simple : trouver le chiffre entre 0 et 100 (inclus) choisi aléatoirement par le serveur.
+                    Plusieures difficultés existent :  
+                </h2>
+                <ul>
+                    <li>Normal : 10 essais Max</li>
+                    <li>Difficile : 7 essais Max </li>
+                    <li>Très difficile : 10 essais Max et le chiffre à deviner change à chaque essais ! (+1 ou -1)</li>
+                </ul>
+            </div>
+
+            <div class="difficulte">
+                <ul>
+                    <li>
+                        <a onclick="tentative('normal')" type="button" class="normal">Normal</a>
+                    </li>
+                    <li>
+                        <a onclick="tentative('difficile')" type="button"  class="difficile">Difficile</a>
+                    </li>
+                    <li>
+                        <a onclick="tdifficile('normal')"  type="button" class="tdifficile">TRES DIFFICILE !</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        
+    </div>
+    
+    <script src='apps.js'></script>
+</body>
+</html>
