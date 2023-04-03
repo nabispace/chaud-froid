@@ -84,7 +84,7 @@ body
 {
     Width:63%;
     color:#172c66;
-    margin:2% 5% 5% 2%;
+    padding:2% 5% 5% 2%;
     border-right:0.5px solid #172c66;
 }
 
@@ -112,6 +112,8 @@ body
 {
     background-color: #f582ae;
     border: #f582ae;
+    width:260px;
+    height:45px;
     font-size:18px;
 }
 
@@ -119,6 +121,8 @@ body
 {
     background-color: #f58282;
     border:#f58282;
+    width:260px;
+    height:45px;
     font-size:20px;
 }
 
@@ -126,5 +130,68 @@ body
 {
     background-color: #fe3d3d;
     border:#fe3d3d;
+    width:260px;
+    height:45px;
     font-size:23px;
+}
+
+/* Media query pour écrans plus petits */
+@media screen and (max-width:1400px)
+{
+    .footer
+    {
+        display:flex;
+        background-color:#f3d2c1;
+        /* clear:both; */
+        width:100%;
+        margin-top:2%;
+    }
+
+    .body
+    {
+       width:100%;
+       color:#172c66;
+       height:20%;
+       padding-top:3%;
+    }
+
+    .explication
+    {
+        Width:63%;
+        color:#172c66;
+        margin:2% 6% 5% 2%;
+        border-right:0.5px solid #172c66;
+    }
+
+    .explication h2
+    {
+        font-size:26px;
+    }
+
+    .btn-norm
+    {
+        background-color: #f582ae;
+        border: #f582ae;
+        width:200px;
+        height:45px;
+        font-size:15px;
+    }
+    
+    .btn-dif
+    {
+        background-color: #f58282;
+        border:#f58282;
+        width:200px;
+        height:45px;
+        font-size:15px;
+    }
+    
+    .btn-tdif
+    {
+        background-color: #fe3d3d;
+        border:#fe3d3d;
+        width:200px;
+        height:45px;
+        font-size:15px;
+    }
 }

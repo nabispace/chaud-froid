@@ -13,8 +13,9 @@ let i=0;
 let tabi=[];
 
 
-function tentative()
+function tentative(difficulty)
 {
+    
     if(inp.value != a)
     {
         i++;
