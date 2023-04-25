@@ -78,29 +78,34 @@ body
     /* clear:both; */
     width:100%;
     margin-top:5%;
+    margin-bottom: 20%;
 }
 
 .explication
 {
     Width:63%;
     color:#172c66;
-    padding:2% 5% 5% 2%;
+    padding:1% 5% 0 2%;
     border-right:0.5px solid #172c66;
 }
 
 .explication ul
 {
-    padding-top:3%;
+    padding-top:1%;
 }
 
-.explication ul li
+/* .explication ul li
 {
     font-size:large;
-}
+} */
 
 .difficulte
 {
-    margin:10% 5%;
+    /* margin:10% 5%; */
+    width:40%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .difficulte ul
@@ -144,7 +149,7 @@ body
         background-color:#f3d2c1;
         /* clear:both; */
         width:100%;
-        margin-top:2%;
+        margin-top:1.7%;
     }
 
     .body
@@ -165,7 +170,7 @@ body
 
     .explication h2
     {
-        font-size:26px;
+        font-size:20px;
     }
 
     .btn-norm

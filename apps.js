@@ -2,41 +2,49 @@ const inp = document.getElementById('proposition');
 const essais = document.getElementById('ess');
 const nbessais = document.getElementById('nbe');
 const soluce = document.getElementById('sol');
+//const btndif = document.getElementById()
 
-let aa = Math.random();
-let b = aa * 100;
-let a=Math.ceil(b);
+let Nbrandom = Math.ceil(Math.random()* 100);
 
-console.log(a,aa,b);
+console.log(Nbrandom);
 
 let i=0;
+let essaismax = 10;
 let tabi=[];
 
 
 function tentative(difficulty)
 {
-    
-    if(inp.value != a)
+    if(i < essaismax)
     {
-        i++;
-        tabi.push(inp.value);
-        essais.innerHTML = tabi;
-        nbessais.innerHTML = i;
-
-        if(inp.value > a)
+        if(inp.value != Nbrandom)
         {
-            soluce.innerHTML = 'C\'est plus petit'; 
+            i++;
+            tabi.push(inp.value);
+            essais.innerHTML = tabi;
+            nbessais.innerHTML = i;
+
+            if(inp.value > Nbrandom)
+            {
+                soluce.innerHTML = 'C\'est plus petit'; 
+            }
+
+            if(inp.value < Nbrandom)
+            {
+                soluce.innerHTML = 'C\'est plus grand'; 
+            }
         }
-
-        if(inp.value < a)
+        if(inp.value==Nbrandom)
         {
-            soluce.innerHTML = 'C\'est plus grand'; 
+            alert('Bravo champion, tu as trouvé le bon résultat !');
+            soluce.innerHTML = `Bravo, la solution était bien ${Nbrandom}`;
+            inp.classList.add('disable');
         }
     }
-    if(inp.value==a)
+    else
     {
-        alert('Bravo champion, tu as trouvé le bon résultat !');
-        soluce.innerHTML = `Bravo, la solution était bien ${a}`;
+        alert('Dommage, c\'est perdu!');
+        soluce.innerHTML = `Dommage, nombre d'essais maximum atteint, la solution était ${Nbrandom}`;
         inp.classList.add('disable');
     }
         
